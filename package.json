@@ -14,7 +14,7 @@
     "dev": "vite",
     "build": "vite build"
   },
-  "author": "GDG Accra",
+  "author": "Shadrack Inusah",
   "license": "MIT",
   "overrides": {
     "brace-expansion": "^5.0.8"
