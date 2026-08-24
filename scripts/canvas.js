@@ -48,18 +48,21 @@ export const updateSliderStates = () => {
   const eleX = document.querySelector(".form input#image-x");
   const eleY = document.querySelector(".form input#image-y");
   const eleZ = document.querySelector(".form input#image-z");
+  const eleDownload = document.querySelector("button#download");
   const img = settings.image.img;
 
   if (!img) {
     if (eleX) eleX.disabled = true;
     if (eleY) eleY.disabled = true;
     if (eleZ) eleZ.disabled = true;
+    if (eleDownload) eleDownload.disabled = true;
     return;
   }
 
   if (eleZ) eleZ.disabled = false;
   if (eleX) eleX.disabled = false;
   if (eleY) eleY.disabled = false;
+  if (eleDownload) eleDownload.disabled = false;
 };
 
 export const draw = () => {
