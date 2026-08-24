@@ -236,9 +236,6 @@ main {
     grid-auto-flow: column;
     align-items: center;
     grid-gap: 0.5em;
-    position: fixed;
-    right: 3em;
-    bottom: 3em;
     height: 56px;
     border-radius: 56px;
     padding: 0 2em 0 1.7em;
@@ -255,6 +252,16 @@ main {
       cursor: not-allowed;
       opacity: 0.5;
     }
+  }
+
+  .actions-container {
+    position: fixed;
+    right: 3em;
+    bottom: 3em;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1em;
+    z-index: 10;
   }
 
   footer {
@@ -293,9 +300,110 @@ main {
       padding: 1em;
     }
 
-    .fab {
+    .actions-container {
       right: 1rem;
       bottom: 1rem;
+      grid-auto-flow: row;
+      grid-gap: 0.75em;
     }
   }
+}
+
+.fab.linkedin {
+  background-color: #0077b5;
+}
+
+dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 2em;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  font-family: 'Google Sans', sans-serif;
+  background-color: #fff;
+  margin: auto;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+dialog .dialog-content {
+  display: grid;
+  grid-gap: 1em;
+}
+
+dialog .dialog-content h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.25em;
+}
+
+dialog .dialog-content .status-msg {
+  margin: 0;
+  color: #34a853;
+  font-weight: 500;
+  font-size: 0.95em;
+}
+
+dialog .dialog-content .text-preview textarea {
+  width: 100%;
+  height: 100px;
+  padding: 0.8em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  resize: none;
+  outline: none;
+}
+
+dialog .dialog-content .steps {
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1.5;
+}
+
+dialog .dialog-content .steps li {
+  margin-bottom: 0.4em;
+}
+
+dialog .dialog-content .dialog-actions {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: flex-end;
+  grid-gap: 0.8em;
+  margin-top: 0.5em;
+}
+
+dialog .dialog-content .dialog-actions button,
+dialog .dialog-content .dialog-actions a {
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5em;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Google Sans', sans-serif;
+}
+
+dialog .dialog-content .dialog-actions .btn-sec {
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+}
+
+dialog .dialog-content .dialog-actions .btn-prim {
+  background-color: #0077b5;
+  color: #fff;
+  border: none;
 }

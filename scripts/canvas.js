@@ -49,6 +49,7 @@ export const updateSliderStates = () => {
   const eleY = document.querySelector(".form input#image-y");
   const eleZ = document.querySelector(".form input#image-z");
   const eleDownload = document.querySelector("button#download");
+  const eleShare = document.querySelector("button#share-linkedin");
   const img = settings.image.img;
 
   if (!img) {
@@ -56,6 +57,7 @@ export const updateSliderStates = () => {
     if (eleY) eleY.disabled = true;
     if (eleZ) eleZ.disabled = true;
     if (eleDownload) eleDownload.disabled = true;
+    if (eleShare) eleShare.disabled = true;
     return;
   }
 
@@ -63,6 +65,7 @@ export const updateSliderStates = () => {
   if (eleX) eleX.disabled = false;
   if (eleY) eleY.disabled = false;
   if (eleDownload) eleDownload.disabled = false;
+  if (eleShare) eleShare.disabled = false;
 };
 
 export const draw = () => {

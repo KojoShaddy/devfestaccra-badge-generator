@@ -251,6 +251,40 @@ export const panListener = () => {
   );
 };
 
+export const shareLinkedinListener = () => {
+  const btn = document.querySelector("button#share-linkedin");
+  const dialog = document.querySelector("dialog#share-dialog");
+  const closeBtn = document.querySelector("button#close-dialog");
+  const goBtn = document.querySelector("a#go-linkedin");
+  const textArea = document.querySelector("textarea#share-text-val");
+
+  if (!btn || !dialog) return;
+
+  const shareText = "Excited to attend DevFest Accra 2026! 🚀 Join me by registering here: gdg.community.dev/e/mj2wtp/ \n\nCreate your own attendee DP here: https://devfestaccra-badge-generator.vercel.app/ \n\n#DevFestAccra #GDGAccra";
+  if (textArea) textArea.value = shareText;
+
+  btn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(shareText);
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
+    }
+    dialog.showModal();
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      dialog.close();
+    });
+  }
+
+  if (goBtn) {
+    goBtn.addEventListener("click", () => {
+      dialog.close();
+    });
+  }
+};
+
 export const initListeners = () => {
   rangeListener("x", 1);
   rangeListener("y", 1);
@@ -261,6 +295,7 @@ export const initListeners = () => {
   fileListener("image");
   resetButtonListener();
   downloadButtonListener();
+  shareLinkedinListener();
   dropListener();
   pasteListener();
   panListener();
