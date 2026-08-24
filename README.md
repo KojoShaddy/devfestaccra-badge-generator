@@ -34,4 +34,4 @@ To run this project locally, ensure you have [Node.js](https://nodejs.org/) inst
 
 This project is published under the [MIT license](/LICENSE.md).
 
-This project is a community-driven initiative and is not officially endorsed and/or supported by Google, the corporation.
+This project is built for the GDG Accra's DevFest 2026 event to enhance our brand and community engagement. 
