@@ -1,8 +1,8 @@
-# DevFest Accra 2026 Badge Generator
+# DevFest Accra 2026 DP Generator
 
-![Screenshot of DevFest Accra 2026 Badge Generator](./static/cover.png)
+![Screenshot of DevFest Accra 2026 DP Generator](./static/cover.png)
 
-> Generate your DevFest Accra 2026 profile badge directly in your browser. Select between Dark and Light frame styles, position and zoom your photo freely, and download in full resolution! No extra software required.
+> Generate your DevFest Accra 2026 profile DP directly in your browser. Select between Dark and Light frame styles, position and zoom your photo freely, and download in full resolution! No extra software required.
 
 ## Features
 

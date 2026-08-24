@@ -80,7 +80,7 @@ export const downloadButtonListener = () => {
       const fileName = settings.image.fileName
         ? settings.image.fileName.replace(/\.[^/.]+$/, "")
         : "";
-      a.download = `${fileName || Date.now()}-devfestaccra2026-badge.png`;
+      a.download = `${fileName || Date.now()}-devfestaccra2026-dp.png`;
       a.href = url;
       a.click();
       settings.isExport = false;

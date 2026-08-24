@@ -1,7 +1,7 @@
 {
-  "name": "devfestaccra-badge-generator",
+  "name": "devfestaccra-dp-generator",
   "version": "1.0.0",
-  "description": "Badge generator for DevFest Accra 2026",
+  "description": "DP generator for DevFest Accra 2026",
   "devDependencies": {
     "eslint": "^8.57.1",
     "eslint-config-google": "^0.14.0",
