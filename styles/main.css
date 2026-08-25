@@ -407,3 +407,39 @@ dialog .dialog-content .dialog-actions .btn-prim {
   color: #fff;
   border: none;
 }
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #4285f4;
+  text-decoration: underline;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  cursor: pointer;
+  display: inline;
+  margin-left: 0.3em;
+}
+
+.link-btn:hover {
+  color: #0d47a1;
+}
+
+dialog .dialog-content p {
+  margin: 0;
+  font-size: 0.95em;
+  color: #444;
+  line-height: 1.5;
+}
+
+dialog .dialog-content ul {
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1.6;
+}
+
+dialog .dialog-content ul li {
+  margin-bottom: 0.6em;
+}

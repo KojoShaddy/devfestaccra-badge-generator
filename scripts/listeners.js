@@ -285,6 +285,24 @@ export const shareLinkedinListener = () => {
   }
 };
 
+export const disclaimerListener = () => {
+  const trigger = document.querySelector("#disclaimer-trigger");
+  const dialog = document.querySelector("#disclaimer-dialog");
+  const closeBtn = document.querySelector("#close-disclaimer");
+
+  if (!trigger || !dialog) return;
+
+  trigger.addEventListener("click", () => {
+    dialog.showModal();
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      dialog.close();
+    });
+  }
+};
+
 export const initListeners = () => {
   rangeListener("x", 1);
   rangeListener("y", 1);
@@ -296,6 +314,7 @@ export const initListeners = () => {
   resetButtonListener();
   downloadButtonListener();
   shareLinkedinListener();
+  disclaimerListener();
   dropListener();
   pasteListener();
   panListener();

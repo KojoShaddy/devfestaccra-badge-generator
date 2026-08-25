@@ -74,7 +74,7 @@
           </div>
         </div>
         <footer>
-          <div>&copy; 2026 DevFest Accra. All rights reserved.</div>
+          <div>&copy; 2026 DevFest Accra. All rights reserved. <button id="disclaimer-trigger" type="button" class="link-btn">Disclaimer</button></div>
         </footer>
       </aside>
       <content class="preview">
@@ -113,6 +113,20 @@
         <div class="dialog-actions">
           <button id="close-dialog" type="button" class="btn-sec">Cancel</button>
           <a id="go-linkedin" href="https://www.linkedin.com/feed/" target="_blank" class="btn-prim">Go to LinkedIn</a>
+        </div>
+      </div>
+    </dialog>
+    <dialog id="disclaimer-dialog">
+      <div class="dialog-content">
+        <h3>Privacy & Data Security</h3>
+        <p>This application is a <strong>fully client-side</strong> static web tool.</p>
+        <ul>
+          <li><strong>Zero Server-Side Storage</strong>: No image files, metadata, or profile information are uploaded to any external server, backend database, or cloud infrastructure.</li>
+          <li><strong>In-Browser Processing</strong>: All image transformations, positioning, cropping, overlays, and canvas renderings are executed locally in your browser memory using JavaScript and the HTML5 Canvas API.</li>
+          <li><strong>No Data Persistence</strong>: The application holds no session persistence. Once the browser tab is closed, all loaded image resources are cleared from browser memory.</li>
+        </ul>
+        <div class="dialog-actions">
+          <button id="close-disclaimer" type="button" class="btn-prim">Close</button>
         </div>
       </div>
     </dialog>
