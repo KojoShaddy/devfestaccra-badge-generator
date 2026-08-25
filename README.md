@@ -29,6 +29,13 @@ To run this project locally, ensure you have [Node.js](https://nodejs.org/) inst
    ```bash
    npm run build
    ```
+## Privacy & Data Security
+
+This application is a **fully client-side** static web tool.
+
+- **Zero Server-Side Storage**: No image files, metadata, or profile information are uploaded to any external server, backend database, or cloud infrastructure.
+- **In-Browser Processing**: All image transformations, positioning, cropping, overlays, and canvas renderings are executed locally in your browser memory using JavaScript and the HTML5 Canvas API.
+- **No Data Persistence**: The application holds no session persistence. Once the browser tab is closed, all loaded image resources are cleared from browser memory.
 
 ## License
 
