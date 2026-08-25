@@ -251,19 +251,57 @@ export const panListener = () => {
   );
 };
 
-export const shareLinkedinListener = () => {
-  const btn = document.querySelector("button#share-linkedin");
+export const shareListener = () => {
+  const btn = document.querySelector("button#share-btn");
   const dialog = document.querySelector("dialog#share-dialog");
   const closeBtn = document.querySelector("button#close-dialog");
-  const goBtn = document.querySelector("a#go-linkedin");
+  const goBtn = document.querySelector("a#go-platform");
   const textArea = document.querySelector("textarea#share-text-val");
+  const platformRadios = document.querySelectorAll('input[name="platform"]');
+  const shareTitle = document.querySelector("#share-title");
+  const platformName = document.querySelector("#platform-name");
 
   if (!btn || !dialog) return;
 
   const shareText = "Excited to attend DevFest Accra 2026! 🚀 Join me by registering here: gdg.community.dev/e/mj2wtp/ \n\nCreate your own attendee DP here: dp.gdgaccra.org \n\n#DevFestAccra #GDGAccra @GDGAccra";
   if (textArea) textArea.value = shareText;
 
+  const updateDialogPlatform = () => {
+    const selectedRadio = document.querySelector('input[name="platform"]:checked');
+    if (!selectedRadio) return;
+
+    const platform = selectedRadio.value;
+
+    if (platform === "linkedin") {
+      if (shareTitle) shareTitle.textContent = "Share your DP to LinkedIn!";
+      if (platformName) platformName.textContent = "LinkedIn";
+      if (goBtn) {
+        goBtn.textContent = "Go to LinkedIn";
+        goBtn.href = "https://www.linkedin.com/feed/";
+        goBtn.style.backgroundColor = "#0077b5";
+      }
+    } else if (platform === "x") {
+      if (shareTitle) shareTitle.textContent = "Share your DP to X!";
+      if (platformName) platformName.textContent = "X";
+      if (goBtn) {
+        goBtn.textContent = "Go to X";
+        goBtn.href = `https://x.com/intent/post?text=${encodeURIComponent(shareText)}`;
+        goBtn.style.backgroundColor = "#000000";
+      }
+    }
+  };
+
+  platformRadios.forEach((radio) => {
+    radio.addEventListener("change", updateDialogPlatform);
+  });
+
   btn.addEventListener("click", async () => {
+    const linkedinRadio = document.querySelector("input#platform-linkedin");
+    if (linkedinRadio) {
+      linkedinRadio.checked = true;
+      updateDialogPlatform();
+    }
+    
     try {
       await navigator.clipboard.writeText(shareText);
     } catch (err) {
@@ -313,7 +351,7 @@ export const initListeners = () => {
   fileListener("image");
   resetButtonListener();
   downloadButtonListener();
-  shareLinkedinListener();
+  shareListener();
   disclaimerListener();
   dropListener();
   pasteListener();

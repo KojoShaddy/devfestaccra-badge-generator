@@ -49,7 +49,7 @@ export const updateSliderStates = () => {
   const eleY = document.querySelector(".form input#image-y");
   const eleZ = document.querySelector(".form input#image-z");
   const eleDownload = document.querySelector("button#download");
-  const eleShare = document.querySelector("button#share-linkedin");
+  const eleShare = document.querySelector("button#share-btn");
   const img = settings.image.img;
 
   if (!img) {

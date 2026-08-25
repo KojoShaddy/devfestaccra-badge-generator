@@ -443,3 +443,42 @@ dialog .dialog-content ul {
 dialog .dialog-content ul li {
   margin-bottom: 0.6em;
 }
+
+/* Platform Selector Segmented Control */
+dialog .dialog-content .platform-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 4px;
+  border: 1px solid #e0e0e0;
+  margin-top: 0.5em;
+}
+
+dialog .dialog-content .platform-selector input[type="radio"] {
+  display: none;
+}
+
+dialog .dialog-content .platform-selector label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  border-radius: 16px;
+  font-size: 0.85em;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+dialog .dialog-content .platform-selector input[id="platform-linkedin"]:checked + label {
+  background-color: #0077b5;
+  color: #fff;
+}
+
+dialog .dialog-content .platform-selector input[id="platform-x"]:checked + label {
+  background-color: #000000;
+  color: #fff;
+}
