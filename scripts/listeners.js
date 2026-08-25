@@ -260,7 +260,7 @@ export const shareLinkedinListener = () => {
 
   if (!btn || !dialog) return;
 
-  const shareText = "Excited to attend DevFest Accra 2026! 🚀 Join me by registering here: gdg.community.dev/e/mj2wtp/ \n\nCreate your own attendee DP here: https://devfestaccra-badge-generator.vercel.app/ \n\n#DevFestAccra #GDGAccra";
+  const shareText = "Excited to attend DevFest Accra 2026! 🚀 Join me by registering here: gdg.community.dev/e/mj2wtp/ \n\nCreate your own attendee DP here: dp.gdgaccra.org \n\n#DevFestAccra #GDGAccra @GDGAccra";
   if (textArea) textArea.value = shareText;
 
   btn.addEventListener("click", async () => {
